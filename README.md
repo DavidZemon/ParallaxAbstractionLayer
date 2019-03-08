@@ -19,6 +19,24 @@ There are two types of users for this repository: API designers and HAL
 authors. API designers will contribute their ideas to this repository and HAL
 authors will take those ideas and turn them into executable code.
 
+System Architecture
+-------------------
+
+Designed with two layers in mind: HIL and HAL.
+
+### Hardware Interface Layer
+
+Low-level functions that interact directly with the hardware. These functions
+provide little or no abstraction but are merely focused on giving high-level 
+languages (anything other than assembly) access to the Propeller's special 
+purpose registers.
+
+### Hardware Abstraction Layer
+
+Medium- and high-level functions that interact with either HIL or other HAL 
+functions to accomplish high(er) level goals, such as "set the clock 
+frequency" or "start a PWM signal."
+
 API Designers
 -------------
 
