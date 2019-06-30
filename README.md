@@ -19,7 +19,7 @@ There are two types of users for this repository: API designers and HAL
 authors. API designers will contribute their ideas to this repository and HAL
 authors will take those ideas and turn them into executable code.
 
-System Architecture
+PAL Design & Architecture
 -------------------
 
 Designed with two layers in mind: HIL and HAL.
@@ -36,6 +36,32 @@ purpose registers.
 Medium- and high-level functions that interact with either HIL or other HAL 
 functions to accomplish high(er) level goals, such as "set the clock 
 frequency" or "start a PWM signal."
+
+### Object Hierarchy
+
+Lines ending with `/` are categories. Those without are considered objects in
+the API.
+
+* `builtin/`
+* `concurrency/`
+* `filesystem/`
+* `hmi/`
+  * `input/`
+  * `output/`
+* `memory/`
+* `motor/`
+* `pins/`
+* `sensor/`
+  * `accelerometer/`
+  * `analog/`
+  * `distance/`
+  * `gyroscope/`
+  * `thermometer/`
+* `bus/`
+  * `can/`
+  * `i2c/`
+  * `spi/`
+  * `uart/`
 
 API Designers
 -------------
